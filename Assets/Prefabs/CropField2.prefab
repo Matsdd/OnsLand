@@ -173,6 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crops: {fileID: 4782723739220417876, guid: 7948f93823eb43241b0d74cadff6c19e, type: 3}
-  vec: {x: 0, y: 2, z: 0}
+  vec: {x: 0, y: 5, z: 0}
   quat: {x: 0, y: 0, z: 0, w: 0}
   well: {fileID: 0}
