@@ -6,15 +6,15 @@ public class PlantScript : MonoBehaviour
 {
     public GameObject crops;
     public GameObject Field;
-    public Vector3 vec;
+    public Vector3 vect;
     public Quaternion quat;
     public GameObject well;
 
     // Start is called before the first frame update
     void TheStart(Vector3 vec)
     {
-        transform.position = vec;
-
+        //transform.position = vec;
+        vect = vec;
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class PlantScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Instantiate(crops, vec, quat);
-        Debug.Log(vec);
+        Debug.Log(vect);
+        Instantiate(crops, vect, quat);
     }
 }

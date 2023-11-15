@@ -23,6 +23,8 @@ public class RemoveSignScript : MonoBehaviour
     private void OnMouseDown()
     {
         DestroyImmediate(this.SignField, true);
-        Instantiate(Field, vec, quat);
+        GameObject fild = Instantiate(Field, vec, quat);
+
+        fild.SendMessage("TheStart", vec);
     }
 }
