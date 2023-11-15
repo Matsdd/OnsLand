@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 4203705680206774833}
   - component: {fileID: 4203705680206774862}
   m_Layer: 0
-  m_Name: CropField2
+  m_Name: CropField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crops: {fileID: 4782723739220417876, guid: 7948f93823eb43241b0d74cadff6c19e, type: 3}
+  Field: {fileID: 4203705680206774860}
   vec: {x: 0, y: 5, z: 0}
   quat: {x: 0, y: 0, z: 0, w: 0}
-  well: {fileID: 0}
+  well: {fileID: 919132149155446097, guid: f04549afa1022c348a3f8dd70471f2f7, type: 3}

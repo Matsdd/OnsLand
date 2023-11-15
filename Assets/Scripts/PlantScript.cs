@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlantScript : MonoBehaviour
 {
     public GameObject crops;
+    public GameObject Field;
     public Vector3 vec;
     public Quaternion quat;
     public GameObject well;
+
     // Start is called before the first frame update
-    void Start()
+    void TheStart(Vector3 vec)
     {
+        transform.position = vec;
 
     }
 
@@ -22,5 +25,6 @@ public class PlantScript : MonoBehaviour
     private void OnMouseDown()
     {
         Instantiate(crops, vec, quat);
+        Debug.Log(vec);
     }
 }
