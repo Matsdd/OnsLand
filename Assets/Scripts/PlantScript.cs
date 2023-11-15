@@ -9,6 +9,7 @@ public class PlantScript : MonoBehaviour
     public Vector3 vect;
     public Quaternion quat;
     public GameObject well;
+    public bool positionSet = false;
 
     // Start is called before the first frame update
     void TheStart(Vector3 vec)
@@ -25,9 +26,13 @@ public class PlantScript : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log(vect);
-        vect.x += 1;
-        vect.y += 1.5f;
-        vect.z -= 0.5f;
+        if (!positionSet)
+        {
+            vect.x += 1;
+            vect.y += 1.5f;
+            vect.z -= 0.5f;
+            positionSet = true;
+        }
         Instantiate(crops, vect, quat);
     }
 }
