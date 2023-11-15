@@ -25,6 +25,9 @@ public class PlantScript : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log(vect);
+        vect.x += 1;
+        vect.y += 1.5f;
+        vect.z -= 0.5f;
         Instantiate(crops, vect, quat);
     }
 }
