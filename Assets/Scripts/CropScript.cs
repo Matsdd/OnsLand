@@ -4,23 +4,16 @@ using UnityEngine;
 
 public class CropScript : MonoBehaviour
 {
-    public GameObject crops;
-    public Vector3 vec;
-    public Quaternion quat;
-    public GameObject well;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-
+        anim.SetTrigger("GrowTrigger");
     }
 
     // Update is called once per frame
     void Update()
     {
-    }
-
-    private void OnMouseDown()
-    {
-        Instantiate(crops, vec, quat);
+        
     }
 }
