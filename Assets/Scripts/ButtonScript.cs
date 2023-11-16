@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
+    public int scene;
     void OnMouseDown()
     {
-        SceneManager.LoadScene("Book", LoadSceneMode.Single);
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 }

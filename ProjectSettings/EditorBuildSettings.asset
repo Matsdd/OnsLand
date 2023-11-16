@@ -8,5 +8,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Screen.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Book.unity
+    guid: 9b28a2957f56a3a4ca46e006c3490c9f
+  - enabled: 1
+    path: Assets/Scenes/Crafting.unity
+    guid: 03da7785738a8414b820e6a4c295f981
+  - enabled: 1
+    path: Assets/Scenes/Market.unity
+    guid: 6455fa05ae8ccf1469e0d5f2deffd103
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: c5191187081663d4ab6db3338bddde73
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 6829d6f3abf87cf40b5d04b0f7505a8a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
