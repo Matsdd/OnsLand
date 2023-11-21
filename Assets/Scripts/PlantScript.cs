@@ -28,9 +28,9 @@ public class PlantScript : MonoBehaviour
         Debug.Log(vect);
         if (!positionSet)
         {
-            vect.x += 1;
-            vect.y += 1.5f;
-            vect.z -= 0.5f;
+            vect.x += -1.7f;
+            vect.y += 1f;
+            vect.z -= -2f;
             positionSet = true;
         }
         Instantiate(crops, vect, quat);
