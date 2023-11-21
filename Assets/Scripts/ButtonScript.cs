@@ -7,6 +7,15 @@ public class ButtonScript : MonoBehaviour
 {
     public bool openUrl = false;
     public int scene;
+
+    private void Start()
+    {
+    }
+
+    private void Update()
+    {
+
+    }
     void OnMouseDown()
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Single);

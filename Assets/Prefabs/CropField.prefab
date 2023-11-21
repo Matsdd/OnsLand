@@ -156,3 +156,4 @@ MonoBehaviour:
   quat: {x: 0, y: 0, z: 0, w: 0}
   well: {fileID: 919132149155446097, guid: f04549afa1022c348a3f8dd70471f2f7, type: 3}
   positionSet: 0
+  inventory: {fileID: 4443152121471647094, guid: 7b86ff5238e52df468e31c450a1bb273, type: 3}
