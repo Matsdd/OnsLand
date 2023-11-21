@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2820490489170290347}
+  thing: {fileID: 4782723739220417876}
 --- !u!1 &4876065313078340987
 GameObject:
   m_ObjectHideFlags: 0

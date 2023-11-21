@@ -5,6 +5,7 @@ using UnityEngine;
 public class CropScript : MonoBehaviour
 {
     public Animator anim;
+    public GameObject thing;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +16,10 @@ public class CropScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnMouseDown()
+    {
+        Destroy(thing);
     }
 }
