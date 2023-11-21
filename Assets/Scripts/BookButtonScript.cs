@@ -8,13 +8,12 @@ public class BookButtonScript : MonoBehaviour
 
     public float side;
     public float pageTurning = 0;
-    public float currentPage = 1;
+    static float currentPage = 1;
 
     public GameObject buttonLeft;
     public GameObject buttonRight;
     public void pageSet()
     {
-        /*
         if (currentPage == 1 && side == 1)
         {
             return;
@@ -23,11 +22,11 @@ public class BookButtonScript : MonoBehaviour
         {
             return;
         }
-        */
         if (pageTurning <= 0)
         {
             pageTurning = 100;
             currentPage += -side;
+            Debug.Log(currentPage);
         }
     }
 
