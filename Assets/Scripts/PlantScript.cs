@@ -32,11 +32,10 @@ public class PlantScript : MonoBehaviour
             vect.z -= -2f;
             positionSet = true;
         }
-        Debug.Log(InventoryScript.wheatSeeds);
-        if (InventoryScript.wheatSeeds > 0)
+        if (InventoryScript.buckwheatSeeds > 0)
         {
             Instantiate(crops, vect, quat);
-            InventoryScript.wheatSeeds--;
+            InventoryScript.buckwheatSeeds--;
         }
     }
 }

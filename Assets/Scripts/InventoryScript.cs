@@ -5,8 +5,8 @@ using UnityEngine;
 public class InventoryScript : MonoBehaviour
 {
     public static float cash;
-    public static float wheatSeeds = 3;
-    public static float wheat;
+    public static float buckwheatSeeds = 3;
+    public static float buckwheat;
 
     // Start is called before the first frame update
     void Start()
