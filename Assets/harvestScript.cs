@@ -13,7 +13,6 @@ public class harvestScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(InventoryScript.buckwheat);
         DestroyImmediate(this.crops, true);
             InventoryScript.buckwheat++;
     }
