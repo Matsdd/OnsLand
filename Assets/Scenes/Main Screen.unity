@@ -1399,7 +1399,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.489733
+      value: -41.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3372,6 +3372,10 @@ PrefabInstance:
     - target: {fileID: 379473236763220406, guid: 7b86ff5238e52df468e31c450a1bb273, type: 3}
       propertyPath: cash
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 379473236763220406, guid: 7b86ff5238e52df468e31c450a1bb273, type: 3}
+      propertyPath: wheatSeeds
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1287598495362173478, guid: 7b86ff5238e52df468e31c450a1bb273, type: 3}
       propertyPath: m_LocalPosition.x

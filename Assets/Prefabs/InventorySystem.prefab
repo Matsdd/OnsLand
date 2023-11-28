@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4457bab07fef2a548823952f2671cfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cash: 10
   wheatSeeds: 3
   wheat: 0

@@ -10,7 +10,6 @@ public class PlantScript : MonoBehaviour
     public Quaternion quat;
     public GameObject well;
     public bool positionSet = false;
-    public GameObject inventory;
 
     // Start is called before the first frame update
     void TheStart(Vector3 vec)
@@ -26,7 +25,6 @@ public class PlantScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(vect);
         if (!positionSet)
         {
             vect.x += -1.7f;
@@ -34,10 +32,11 @@ public class PlantScript : MonoBehaviour
             vect.z -= -2f;
             positionSet = true;
         }
-        if (inventory.GetComponent<InventoryScript>().wheatSeeds > 0)
+        Debug.Log(InventoryScript.wheatSeeds);
+        if (InventoryScript.wheatSeeds > 0)
         {
             Instantiate(crops, vect, quat);
-            inventory.GetComponent<InventoryScript>().wheatSeeds--;
+            InventoryScript.wheatSeeds--;
         }
     }
 }

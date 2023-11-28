@@ -6,11 +6,10 @@ using TMPro;
 public class TextScript : MonoBehaviour
 {
     public TMP_Text txt;
-    public GameObject inventory;
 
     void Update()
     {
-        var cash = inventory.GetComponent<InventoryScript>().cash;
+        var cash = InventoryScript.cash;
         txt.text = "Cash = " + cash;
     }
 }
