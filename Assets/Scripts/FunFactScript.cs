@@ -12,23 +12,23 @@ public class FunFactScript : MonoBehaviour
 
         if (rand == 1)
         {
-            txt.text = "Kaas";
+            txt.text = "Fun Fact: \nHet perceel in Wassenaar maakt hun eigen jammetjes van verse stukken fruit van hun grond.";
         }
         else if (rand == 2)
         {
-            txt.text = "Bij";
+            txt.text = "Fun Fact: \nLand van Ons gebruikt wespen tegen al het ongedierte op hun gewassen, dit is veel beter voor de biodiversiteit.";
         }
         else if (rand == 3)
         {
-            txt.text = "Koe";
+            txt.text = "Fun Fact: \nHet perceel in Wassenaar is van plan hun eigen theetuintje te maken, zo kan jij dus binnenkort je eigen kruiden plukken voor je kopje thee.";
         }
         else if (rand == 4)
         {
-            txt.text = "Kip";
+            txt.text = "Fun Fact: \nLand van Ons heeft op elk perceel een bepaalde boer staan die alles verbouwt, lijkt jou dit nou ook leuk check dan de Land van Ons website.";
         }
         else if (rand == 5)
         {
-            txt.text = "Peer";
+            txt.text = "Fun Fact: \n Land van ons verkoopt en verbouwt niet alleen eten, maar maken ook hun eigen bier, check de Land van Ons website voor meer hierover.";
         }
         else if (rand == 6)
         {
