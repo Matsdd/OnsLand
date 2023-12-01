@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlantScript : MonoBehaviour
 {
-    public GameObject crops;
     public GameObject Field;
     public Vector3 vect;
     public Quaternion quat;
@@ -21,6 +20,11 @@ public class PlantScript : MonoBehaviour
         //transform.position = vec;
         vect = vec;
     }
+    void TheStart2(Vector3 uivec)
+    {
+        //transform.position = vec;
+        uivect = uivec;
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,12 +40,7 @@ public class PlantScript : MonoBehaviour
             vect.z -= -2f;
             positionSet = true;
         }
-        if (InventoryScript.buckwheatSeeds > 0)
-        {
-            Instantiate(crops, vect, quat);
-            InventoryScript.buckwheatSeeds--;
-
-            Instantiate(ui, uivect, uiquat);
-        }
+        GameObject Ui = Instantiate(ui, uivect, uiquat);
+        Ui.SendMessage("TheStart", vect);
     }
 }
