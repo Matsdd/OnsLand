@@ -8,8 +8,12 @@ public class PlantScript : MonoBehaviour
     public GameObject Field;
     public Vector3 vect;
     public Quaternion quat;
-    public GameObject well;
     public bool positionSet = false;
+
+    public GameObject cropUI;
+    public GameObject ui;
+    public Vector3 uivect;
+    public Quaternion uiquat;
 
     // Start is called before the first frame update
     void TheStart(Vector3 vec)
@@ -36,6 +40,8 @@ public class PlantScript : MonoBehaviour
         {
             Instantiate(crops, vect, quat);
             InventoryScript.buckwheatSeeds--;
+
+            Instantiate(ui, uivect, uiquat);
         }
     }
 }

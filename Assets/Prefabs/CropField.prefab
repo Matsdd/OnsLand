@@ -154,5 +154,8 @@ MonoBehaviour:
   Field: {fileID: 4203705680206774860}
   vect: {x: 2, y: -1, z: 2}
   quat: {x: 0, y: 0, z: 0, w: 0}
-  well: {fileID: 919132149155446097, guid: f04549afa1022c348a3f8dd70471f2f7, type: 3}
   positionSet: 0
+  cropUI: {fileID: 0}
+  ui: {fileID: 2881782846627151574, guid: 1cb93db8d5f05964fbe8e3d7bb1ca9b6, type: 3}
+  uivect: {x: 0, y: 0, z: 0}
+  uiquat: {x: 0, y: 0, z: 0, w: 0}
