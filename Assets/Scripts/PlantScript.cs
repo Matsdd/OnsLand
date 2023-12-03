@@ -13,6 +13,7 @@ public class PlantScript : MonoBehaviour
     public GameObject ui;
     public Vector3 uivect;
     public Quaternion uiquat;
+    public static bool cropSelecting = false;
 
     // Start is called before the first frame update
     void TheStart(Vector3 vec)
@@ -40,7 +41,12 @@ public class PlantScript : MonoBehaviour
             vect.z -= -2f;
             positionSet = true;
         }
-        GameObject Ui = Instantiate(ui, uivect, uiquat);
-        Ui.SendMessage("TheStart", vect);
+        if (!cropSelecting)
+        {
+            GameObject Ui = Instantiate(ui, uivect, uiquat);
+            Ui.SendMessage("TheStart", vect);
+
+            cropSelecting = true;
+        }
     }
 }

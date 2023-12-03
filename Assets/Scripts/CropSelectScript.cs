@@ -26,6 +26,8 @@ public class CropSelectScript : MonoBehaviour
             Instantiate(crops, vec, quat);
             InventoryScript.buckwheatSeeds--;
             Destroy(ths);
+
+            PlantScript.cropSelecting = false;
         }
     }
 }

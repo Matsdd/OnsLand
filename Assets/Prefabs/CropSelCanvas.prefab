@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ths: {fileID: 5025156060231510697}
+  crop: 1
 --- !u!114 &7710808812094595366
 MonoBehaviour:
   m_ObjectHideFlags: 0
