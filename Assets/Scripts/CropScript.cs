@@ -22,6 +22,7 @@ public class CropScript : MonoBehaviour
 
     private void OnMouseDown()
     {
+
         Destroy(thing);
     }
 }
