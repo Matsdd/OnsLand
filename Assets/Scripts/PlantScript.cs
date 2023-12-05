@@ -8,6 +8,7 @@ public class PlantScript : MonoBehaviour
     public Vector3 vect;
     public Quaternion quat;
     public bool positionSet = false;
+    public bool booked = false;
 
     public GameObject cropUI;
     public GameObject ui;
@@ -43,10 +44,15 @@ public class PlantScript : MonoBehaviour
         }
         if (!cropSelecting)
         {
-            GameObject Ui = Instantiate(ui, uivect, uiquat);
-            Ui.SendMessage("TheStart", vect);
 
-            cropSelecting = true;
+                GameObject Ui = Instantiate(ui, uivect, uiquat);
+                Ui.SendMessage("TheStart", vect);
+
+                booked = true;
+                Debug.Log(booked);
+
+                cropSelecting = true;
+           
         }
     }
 }
