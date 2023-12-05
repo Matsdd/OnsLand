@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 9098801152578504615}
   - component: {fileID: 2257466849710807211}
   - component: {fileID: 8129100215488170577}
+  - component: {fileID: 1508760323986596562}
   m_Layer: 0
   m_Name: Crop plant
   m_TagString: Untagged
@@ -218,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8129100215488170577}
   thing: {fileID: 8189508461443361507}
+  crop: {fileID: 4778621111081704462}
   waterBar: {fileID: 2483644933428654301, guid: 514c7fe05c41f1a46a2bbc000164582f, type: 3}
 --- !u!95 &8129100215488170577
 Animator:
@@ -241,6 +243,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1508760323986596562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778621111081704462}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 2, z: 5}
+  m_Center: {x: 2, y: 1, z: -2.5}
 --- !u!1 &5228755518548895366
 GameObject:
   m_ObjectHideFlags: 0

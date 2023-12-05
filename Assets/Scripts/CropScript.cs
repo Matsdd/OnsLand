@@ -6,6 +6,7 @@ public class CropScript : MonoBehaviour
 {
     public Animator anim;
     public GameObject thing;
+    public GameObject crop;
 
     public GameObject waterBar;
     // Start is called before the first frame update
@@ -22,7 +23,11 @@ public class CropScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        DestroyImmediate(thing, true);
+        Destroy(thing);
+
+        crop.GetComponent<PlantScript>().booked = false;
+
         InventoryScript.buckwheat++;
+            Debug.Log(InventoryScript.buckwheat);
     }
 }
