@@ -5,8 +5,6 @@ public class ShopController : MonoBehaviour
 {
     public TMP_Text currencyText;
 
-    private int currency = 70;
-
     void Start()
     {
         UpdateCurrencyText();
@@ -14,9 +12,10 @@ public class ShopController : MonoBehaviour
 
     public void BuyItem(int itemCost)
     {
-        if (currency >= itemCost)
+        // Access cash directly from the InventoryScript
+        if (InventoryScript.cash >= itemCost)
         {
-            currency -= itemCost;
+            InventoryScript.cash -= itemCost;
             UpdateCurrencyText();
             Debug.Log("BuyItem clicked!");
         }
@@ -28,7 +27,8 @@ public class ShopController : MonoBehaviour
 
     public void SellItem()
     {
-        currency += 10;
+        // Modify cash directly from the InventoryScript
+        InventoryScript.cash += 10;
         UpdateCurrencyText();
         Debug.Log("SellItem clicked!");
     }
@@ -48,6 +48,7 @@ public class ShopController : MonoBehaviour
 
     void UpdateCurrencyText()
     {
-        currencyText.text = "Currency: " + currency;
+        // Access cash directly from the InventoryScript
+        currencyText.text = "Currency: " + InventoryScript.cash;
     }
 }
