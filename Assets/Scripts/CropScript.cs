@@ -6,6 +6,8 @@ public class CropScript : MonoBehaviour
 {
     public Animator anim;
     public GameObject thing;
+
+    public GameObject waterBar;
     // Start is called before the first frame update
     void Start()
     {
