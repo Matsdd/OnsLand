@@ -19,7 +19,7 @@ public class CropSelectScript : MonoBehaviour
     {
         
     }
-    public void onClick()
+    public void onClickBuck()
     {
         if (InventoryScript.buckwheatSeeds > 0)
         {
@@ -29,5 +29,44 @@ public class CropSelectScript : MonoBehaviour
 
             PlantScript.cropSelecting = false;
         }
+    }
+    public void onClickWheat()
+    {
+
+    }
+
+    public void onClickHut()
+    {
+
+    }
+
+    public void onClickSpelt()
+    {
+
+    }
+
+    public void onClickOat()
+    {
+
+    }
+
+    public void onClickRye()
+    {
+
+    }
+
+    public void onClickHop()
+    {
+
+    }
+
+    public void onClickApple()
+    {
+
+    }
+
+    public void onClickCran()
+    {
+
     }
 }
