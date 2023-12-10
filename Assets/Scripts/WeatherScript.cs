@@ -8,18 +8,24 @@ public class WeatherScript : MonoBehaviour
     public float rainRandom = 0f;
     public float rainTime = 0f;
 
+    public static bool raining = false;
+    public static float temp = 20;
+
     void Update()
     {
         Debug.Log(rainTime);
         rainTime--;
+        Debug.Log(rainTime);
 
         if (rainTime > 0)
         {
             itsRainingMen.Emit(1);
+            raining = true;
         }
         else
         {
-            rainRandom = Mathf.Round(Random.Range(0, 10000));
+            rainRandom = Mathf.Round(Random.Range(0, 40000));
+            raining = false;
         }
 
         if (rainRandom == 0)
