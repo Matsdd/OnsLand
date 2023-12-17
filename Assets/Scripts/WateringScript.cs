@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WateringScript : MonoBehaviour
 {
-    public float water;
+    public Image WaterBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,6 @@ public class WateringScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        water = 1;
+        WaterBar.fillAmount = 1;
     }
 }
