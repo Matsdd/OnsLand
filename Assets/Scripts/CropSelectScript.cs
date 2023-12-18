@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CropSelectScript : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class CropSelectScript : MonoBehaviour
             Destroy(ths);
 
             PlantScript.cropSelecting = false;
+
+            GroundBarScript.fillAmnt -= 0.1f;
         }
     }
     public void onClickWheat()

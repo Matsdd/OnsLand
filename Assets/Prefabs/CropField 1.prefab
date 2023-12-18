@@ -67,12 +67,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a997d12e9ad857a478356f452e574079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crops: {fileID: 8189508461443361507, guid: edd2ceea62be2594eb2e1db85a9554b8, type: 3}
   Field: {fileID: 4212794986406111622}
   vect: {x: 2, y: -1, z: 2}
   quat: {x: 0, y: 0, z: 0, w: 0}
   positionSet: 0
-  cropUI: {fileID: 0}
+  booked: 0
+  cropUI: {fileID: 8189508461443361507, guid: edd2ceea62be2594eb2e1db85a9554b8, type: 3}
   ui: {fileID: 5025156060231510697, guid: 618246cfa753b5546afbf009a74e6098, type: 3}
   uivect: {x: 0, y: 0, z: 0}
   uiquat: {x: 0, y: 0, z: 0, w: 0}

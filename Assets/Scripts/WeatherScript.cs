@@ -9,8 +9,8 @@ public class WeatherScript : MonoBehaviour
 
     public float rainRandom = 0f;
     public float rainDuration = 0f;
-    public float snowRandom = 0f;
-    public float snowDuration = 0f;
+    public float snowRandom = 1f;
+    public float snowDuration = 1f;
 
     public static bool raining = false;
     public static bool snowing = false;
@@ -25,7 +25,7 @@ public class WeatherScript : MonoBehaviour
         if (rainDuration > 0) {
             itsRainingMen.Emit(1);
             raining = true;
-        } else if (snowDuration < 0) {
+        } else if (snowDuration <= 0) {
             //gaat het regenen?
             rainRandom = Mathf.Round(Random.Range(0, 40000));
             raining = false;
@@ -44,7 +44,7 @@ public class WeatherScript : MonoBehaviour
         if (snowDuration > 0) {
             itsSnowingMen.Emit(1);
             snowing = true;
-        } else if (rainDuration < 0) {
+        } else if (rainDuration <= 0) {
             //gaat het sneeuwen?
             snowRandom = Mathf.Round(Random.Range(0, 65000));
             snowing = false;

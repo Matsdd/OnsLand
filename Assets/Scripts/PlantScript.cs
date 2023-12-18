@@ -31,6 +31,10 @@ public class PlantScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!booked)
+        {
+            GroundBarScript.fillAmnt += 0.00002f;
+        }
     }
 
     private void OnMouseDown()

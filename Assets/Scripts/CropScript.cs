@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CropScript : MonoBehaviour
 {
@@ -9,25 +10,27 @@ public class CropScript : MonoBehaviour
     public GameObject crop;
 
     public GameObject waterBar;
-    // Start is called before the first frame update
+
+    public float growthTimer = 0f;
+    
     void Start()
     {
         anim.SetTrigger("GrowTrigger");
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        growthTimer += 1;
     }
 
     private void OnMouseDown()
     {
-        Destroy(thing);
-
-        crop.GetComponent<PlantScript>().booked = false;
-
-        InventoryScript.buckwheat++;
-            Debug.Log(InventoryScript.buckwheat);
+        if (growthTimer >= 10000)
+        {
+            Destroy(thing);
+            crop.GetComponent<PlantScript>().booked = false;
+            InventoryScript.buckwheat++;
+        }
     }
 }
