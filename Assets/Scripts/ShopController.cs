@@ -18,12 +18,14 @@ public class ShopController : MonoBehaviour
 
     public void BuyItem(int itemCost)
     {
-        // Access cash directly from the InventoryScript
         if (InventoryScript.cash >= itemCost)
         {
             InventoryScript.cash -= itemCost;
+
+            AddItemToInventory();
+
             UpdateCurrencyText();
-            DisplaySuccessMessage("succesvolle aankoop!");
+            DisplaySuccessMessage("Succesvolle aankoop!");
             Debug.Log("BuyItem clicked!");
         }
         else
@@ -32,7 +34,15 @@ public class ShopController : MonoBehaviour
         }
     }
 
-    public void SellItem()
+    // Other existing code...
+
+    void AddItemToInventory()
+    {
+        InventoryScript.buckwheat++;
+    }
+
+
+public void SellItem()
     {
         InventoryScript.cash += 10;
         UpdateCurrencyText();
@@ -59,33 +69,27 @@ public class ShopController : MonoBehaviour
 
     void DisplayErrorMessage(string message)
     {
-        // Set the error message text and make it visible
         errorMessageText.text = message;
         errorMessageText.gameObject.SetActive(true);
 
-        // Hide the error message after a specified time
         Invoke("HideErrorMessage", errorMessageDisplayTime);
     }
 
     void HideErrorMessage()
     {
-        // Hide the error message
         errorMessageText.gameObject.SetActive(false);
     }
 
     void DisplaySuccessMessage(string message)
     {
-        // Set the success message text and make it visible
         successMessageText.text = message;
         successMessageText.gameObject.SetActive(true);
 
-        // Hide the success message after a specified time
         Invoke("HideSuccessMessage", successMessageDisplayTime);
     }
 
     void HideSuccessMessage()
     {
-        // Hide the success message
         successMessageText.gameObject.SetActive(false);
     }
 }
