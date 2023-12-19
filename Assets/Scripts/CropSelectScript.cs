@@ -22,7 +22,7 @@ public class CropSelectScript : MonoBehaviour
     }
     public void onClickBuck()
     {
-        if (InventoryScript.buckwheatSeeds > 0)
+        if (InventoryScript.buckwheatSeeds > 0 && ((WeatherScript.snowing && BarsScript.fillAmntG > 0.18f) || (!WeatherScript.snowing && BarsScript.fillAmntG > 0.1f)))
         {
             Instantiate(crops, vec, quat);
             InventoryScript.buckwheatSeeds--;
@@ -30,7 +30,14 @@ public class CropSelectScript : MonoBehaviour
 
             PlantScript.cropSelecting = false;
 
-            GroundBarScript.fillAmnt -= 0.1f;
+            if (WeatherScript.snowing)
+            {
+                BarsScript.fillAmntG -= 0.18f;
+            }
+            else
+            {
+                BarsScript.fillAmntG -= 0.1f;
+            }
         }
     }
     public void onClickWheat()

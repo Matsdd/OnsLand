@@ -33,7 +33,14 @@ public class PlantScript : MonoBehaviour
     {
         if (!booked)
         {
-            GroundBarScript.fillAmnt += 0.00002f;
+            if (WeatherScript.snowing)
+            {
+                BarsScript.fillAmntG += 0.000012f;
+            }
+            else
+            {
+                BarsScript.fillAmntG += 0.00002f;
+            }
         }
     }
 

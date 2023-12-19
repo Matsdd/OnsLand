@@ -14,6 +14,7 @@ public class WeatherScript : MonoBehaviour
 
     public static bool raining = false;
     public static bool snowing = false;
+    public static bool harshSun = false;
 
     public static float temp = 20;
 
