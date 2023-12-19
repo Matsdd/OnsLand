@@ -6,6 +6,7 @@ public class ShopController : MonoBehaviour
     public TMP_Text currencyText;
     public TMP_Text errorMessageText;
     public TMP_Text successMessageText;
+    public TMP_Text buckwheatText;
     public float errorMessageDisplayTime = 2f;
     public float successMessageDisplayTime = 2f;
 
@@ -34,15 +35,32 @@ public class ShopController : MonoBehaviour
         }
     }
 
-    // Other existing code...
 
-    void AddItemToInventory()
+void AddItemToInventory()
+{
+    Debug.Log("Before incrementing buckwheat: " + InventoryScript.buckwheat);
+    InventoryScript.buckwheat++;
+    Debug.Log("After incrementing buckwheat: " + InventoryScript.buckwheat);
+
+    if (buckwheatText != null)
     {
-        InventoryScript.buckwheat++;
+        Debug.Log("buckwheatText is not null!");
+        UpdateItemQuantityUI(buckwheatText, InventoryScript.buckwheat);
+    }
+    else
+    {
+        Debug.LogError("buckwheatText is null!");
+    }
+}
+
+
+    void UpdateItemQuantityUI(TMP_Text itemText, float quantity)
+    {
+        itemText.text = "Appels: " + quantity;
     }
 
 
-public void SellItem()
+    public void SellItem()
     {
         InventoryScript.cash += 10;
         UpdateCurrencyText();

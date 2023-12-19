@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-    public static float cash = 10;
+    public static float cash = 100;
 
     public static float buckwheatSeeds = 3;
     public static float buckwheat = 0;
@@ -33,13 +34,17 @@ public class InventoryScript : MonoBehaviour
     public static float huttentutSeeds = 0;
     public static float huttentut = 0;
 
-    // Start is called before the first frame update
+    public static TMP_Text buckwheatText;
+    public static TMP_Text wheatText;
+    public static TMP_Text oatText;
+
     void Start()
     {
-
+        buckwheatText = GameObject.Find("BuckwheatText").GetComponent<TMP_Text>();
+        wheatText = GameObject.Find("WheatText").GetComponent<TMP_Text>();
+        oatText = GameObject.Find("OatText").GetComponent<TMP_Text>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
