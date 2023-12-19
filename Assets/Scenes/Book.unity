@@ -2503,6 +2503,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e235ffa3703529141a792e279a876d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1307866394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307866389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1307866391}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1307866392}
+        m_TargetAssemblyTypeName: BookButtonScript, Assembly-CSharp
+        m_MethodName: pageSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1382213707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,6 +3306,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e235ffa3703529141a792e279a876d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1662068255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662068250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1662068252}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1662068253}
+        m_TargetAssemblyTypeName: BookButtonScript, Assembly-CSharp
+        m_MethodName: pageSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1687160954
 GameObject:
   m_ObjectHideFlags: 0
@@ -4291,11 +4403,15 @@ PrefabInstance:
     - {fileID: 254457437985297752, guid: c97e628c5b949fa4389fc615d0d760d1, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3797798678775235657, guid: c97e628c5b949fa4389fc615d0d760d1, type: 3}
+    - {fileID: 5968868880371784328, guid: c97e628c5b949fa4389fc615d0d760d1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5097782912357909670, guid: c97e628c5b949fa4389fc615d0d760d1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1662068252}
+    - targetCorrespondingSourceObject: {fileID: 5097782912357909670, guid: c97e628c5b949fa4389fc615d0d760d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1662068255}
   m_SourcePrefab: {fileID: 100100000, guid: c97e628c5b949fa4389fc615d0d760d1, type: 3}
 --- !u!1001 &6626908978049821459
 PrefabInstance:
@@ -4409,11 +4525,15 @@ PrefabInstance:
     - {fileID: 1878014113885361776, guid: 8a7f3306113da184787c4a715b851d7b, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8323985628068004444, guid: 8a7f3306113da184787c4a715b851d7b, type: 3}
+    - {fileID: 5632372003363018461, guid: 8a7f3306113da184787c4a715b851d7b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6370592260212213999, guid: 8a7f3306113da184787c4a715b851d7b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1307866391}
+    - targetCorrespondingSourceObject: {fileID: 6370592260212213999, guid: 8a7f3306113da184787c4a715b851d7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1307866394}
   m_SourcePrefab: {fileID: 100100000, guid: 8a7f3306113da184787c4a715b851d7b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

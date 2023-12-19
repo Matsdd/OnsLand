@@ -26,7 +26,6 @@ public class BookButtonScript : MonoBehaviour
         {
             pageTurning = 100;
             currentPage += -side;
-            Debug.Log(currentPage);
         }
     }
 
