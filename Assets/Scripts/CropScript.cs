@@ -12,6 +12,7 @@ public class CropScript : MonoBehaviour
     public GameObject waterBar;
 
     public float growthTimer = 0f;
+    public float growth;
     
     void Start()
     {
@@ -21,7 +22,9 @@ public class CropScript : MonoBehaviour
     
     void Update()
     {
-        growthTimer += 1;
+        growth = (0.75f * BarsScript.fillAmntG) + (0.75f * BarsScript.fillAmntW);
+        growthTimer += growth;
+        Debug.Log(growthTimer);
     }
 
     private void OnMouseDown()

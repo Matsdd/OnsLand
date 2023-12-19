@@ -5,24 +5,28 @@ using UnityEngine.UI;
 
 public class BarsScript : MonoBehaviour
 {
-    public Image WaterBar;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static float fillAmntG;
+    public static float fillAmntW;
+    public static float fillAmntB;
 
-    // Update is called once per frame
+    public Image waterBar;
+    public Image groundBar;
+    public Image bugBar;
+
     void Update()
     {
 
         if (WeatherScript.raining)
         {
-            WaterBar.fillAmount += 0.0001f;
+            waterBar.fillAmount += 0.0001f;
         }
         else
         {
-            WaterBar.fillAmount -= 0.00001f;
+            waterBar.fillAmount -= 0.00001f;
         }
+
+        fillAmntB = bugBar.fillAmount;
+        fillAmntW = waterBar.fillAmount;
+        fillAmntG = groundBar.fillAmount;
     }
 }
