@@ -18,7 +18,7 @@ public class BookButtonScript : MonoBehaviour
         {
             return;
         }
-        if (currentPage == 5 && side == -1)
+        if (currentPage == 4 && side == -1)
         {
             return;
         }
