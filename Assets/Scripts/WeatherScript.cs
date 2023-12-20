@@ -17,6 +17,7 @@ public class WeatherScript : MonoBehaviour
     public static bool harshSun = false;
 
     public static float temp = 20;
+    public static string month = "January";
 
     void Update()
     {
