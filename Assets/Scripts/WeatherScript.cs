@@ -41,19 +41,21 @@ public class WeatherScript : MonoBehaviour
 
         if (rainRandom == 0)
         {
-            //hoelang gaat het regenen?
             rainRandom = Mathf.Round(Random.Range(0, 5));
             //zomer en lente weinig regen, herfst veel, winter beetje
             if (rainRandom == 1 && (month == "April" || month == "Mei" || month == "Juni" || month == "Juli" || month == "Augustus" || month == "Maart"))
             {
+                //hoelang gaat het regenen?
                 rainDuration = Random.Range(2000, 10000);
                 rainRandom = 1;
             }else if ((rainRandom == 1 || rainRandom == 2) && (month == "Februari" || month == "Januari" || month == "December" || month == "November"))
             {
+                //hoelang gaat het regenen?
                 rainDuration = Random.Range(4000, 10000);
                 rainRandom = 1;
             }else if (rainRandom > 1 && (month == "Oktober" || month == "September"))
             {
+                //hoelang gaat het regenen?
                 rainDuration = Random.Range(6000, 16000);
                 rainRandom = 1;
             }
@@ -73,9 +75,20 @@ public class WeatherScript : MonoBehaviour
 
         if (snowRandom == 0)
         {
-            //hoelang sneeuwt het?
-            snowDuration = Random.Range(4000, 15000);
-            snowRandom = 1;
+            snowRandom = Mathf.Round(Random.Range(0, 5));
+            //zomer en lente geen sneeuw, herfst beetje, winter veel
+            if (snowRandom <= 1  && (month == "Februari" || month == "Oktober" || month == "September"))
+            {
+                //hoelang sneeuwt het?
+                snowDuration = Random.Range(3000, 10000);
+                snowRandom = 1;
+            }
+            else if (rainRandom <= 3 && (month == "Januari" || month == "December" || month == "November"))
+            {
+                //hoelang sneeuwt het?
+                snowDuration = Random.Range(4000, 20000);
+                snowRandom = 1;
+            }
         }
 
         //temp 
