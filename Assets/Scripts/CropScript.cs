@@ -32,7 +32,7 @@ public class CropScript : MonoBehaviour
     
     void Update()
     {
-        if (!infested) {
+        if (!infested && BarsScript.fillAmntW > 0 && BarsScript.fillAmntG > 0) {
             growth = (0.75f * BarsScript.fillAmntG) + (0.75f * BarsScript.fillAmntW);
             growthTimer += growth;
         }

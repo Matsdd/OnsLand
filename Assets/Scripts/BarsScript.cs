@@ -16,21 +16,24 @@ public class BarsScript : MonoBehaviour
     void Update()
     {
         //water
-        if (WeatherScript.raining)
+        if (WelcomeScript.welcomed)
         {
-            waterBar.fillAmount += 0.0001f;
-        }
-        else if (WeatherScript.snowing)
-        {
-            waterBar.fillAmount -= 0.000015f;
-        }
-        else if (WeatherScript.harshSun)
-        {
-            waterBar.fillAmount -= 0.00002f;
-        }
-        else
-        {
-            waterBar.fillAmount -= 0.00001f;
+            if (WeatherScript.raining)
+            {
+                waterBar.fillAmount += 0.0001f;
+            }
+            else if (WeatherScript.snowing)
+            {
+                waterBar.fillAmount -= 0.000015f;
+            }
+            else if (WeatherScript.harshSun)
+            {
+                waterBar.fillAmount -= 0.00002f;
+            }
+            else
+            {
+                waterBar.fillAmount -= 0.00001f;
+            }
         }
 
         //grond

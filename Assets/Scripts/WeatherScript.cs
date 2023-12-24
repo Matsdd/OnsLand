@@ -7,11 +7,14 @@ public class WeatherScript : MonoBehaviour
 {
     public ParticleSystem itsRainingMen;
     public ParticleSystem itsSnowingMen;
+    public Light sunlight;
 
     public float rainRandom = 0f;
     public float rainDuration = 0f;
     public float snowRandom = 1f;
-    public float snowDuration = 1f;
+    public float snowDuration = 0f;
+    public float sunRandom = 1f;
+    public float sunDuration = 0f;
 
     public static bool raining = false;
     public static bool snowing = false;
@@ -33,7 +36,7 @@ public class WeatherScript : MonoBehaviour
         if (rainDuration > 0) {
             itsRainingMen.Emit(1);
             raining = true;
-        } else if (snowDuration <= 0) {
+        } else if (snowDuration <= 0 && sunDuration <= 0) {
             //gaat het regenen?
             rainRandom = Mathf.Round(Random.Range(0, 12000));
             raining = false;
@@ -67,9 +70,9 @@ public class WeatherScript : MonoBehaviour
         if (snowDuration > 0) {
             itsSnowingMen.Emit(1);
             snowing = true;
-        } else if (rainDuration <= 0) {
+        } else if (rainDuration <= 0 && sunDuration <= 0) {
             //gaat het sneeuwen?
-            snowRandom = Mathf.Round(Random.Range(0, 65000));
+            snowRandom = Mathf.Round(Random.Range(0, 15000));
             snowing = false;
         }
 
@@ -83,11 +86,50 @@ public class WeatherScript : MonoBehaviour
                 snowDuration = Random.Range(3000, 10000);
                 snowRandom = 1;
             }
-            else if (rainRandom <= 3 && (month == "Januari" || month == "December" || month == "November"))
+            else if (snowRandom <= 3 && (month == "Januari" || month == "December" || month == "November"))
             {
                 //hoelang sneeuwt het?
                 snowDuration = Random.Range(4000, 20000);
                 snowRandom = 1;
+            }
+        }
+
+        //harsh sunlight
+        sunDuration--;
+
+        if (sunDuration > 0)
+        {
+            sunlight.intensity = 1;
+            harshSun = true;
+        }
+        else if (rainDuration <= 0 && snowDuration <= 0)
+        {
+            //gaat het sneeuwen?
+            sunRandom = Mathf.Round(Random.Range(0, 13000));
+            harshSun = false;
+        }
+
+        if (sunRandom == 0)
+        {
+            sunRandom = Mathf.Round(Random.Range(0, 5));
+            //zomer veel, lente beetje, herfst hele kleine beetje
+            if (sunRandom < 1 && (month == "Februari" || month == "Oktober" || month == "September"))
+            {
+                //hoelang zont het?
+                sunDuration = Random.Range(3000, 10000);
+                sunRandom = 1;
+            }
+            else if (sunRandom <= 3 && (month == "Juni" || month == "Juli" || month == "Augustus"))
+            {
+                //hoelang zont het?
+                sunDuration = Random.Range(5000, 16000);
+                sunRandom = 1;
+            }
+            else if (sunRandom <= 3 && (month == "Maart" || month == "April" || month == "Mei"))
+            {
+                //hoelang zont het?
+                sunDuration = Random.Range(4000, 12000);
+                sunRandom = 1;
             }
         }
 

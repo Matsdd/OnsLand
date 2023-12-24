@@ -4837,75 +4837,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833235639}
   m_CullTransparentMesh: 1
---- !u!1001 &848004559
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -41.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.2970319
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -44.147064
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50754954277266222, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_Name
-      value: Buckwheat Stage3
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_Name
-      value: BuckwheatAll
-      objectReference: {fileID: 0}
-    - target: {fileID: 4767400413853537203, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_Name
-      value: Buckwheat Stage2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507901977716847365, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
-      propertyPath: m_Name
-      value: Buckwheat Stage1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e3d2be6774a837e4babc4a7240b8e071, type: 3}
 --- !u!1 &865218888
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,10 +6133,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itsRainingMen: {fileID: 1588964338}
   itsSnowingMen: {fileID: 1298846299}
+  sunlight: {fileID: 2138394672}
   rainRandom: 0
   rainDuration: 0
   snowRandom: 0
   snowDuration: 0
+  sunRandom: 1
+  sunDuration: 1
   tempRandom: 1
   tempImg: {fileID: 737312009}
 --- !u!114 &1196534417 stripped
@@ -10931,7 +10865,6 @@ SceneRoots:
   - {fileID: 1364874389}
   - {fileID: 1232377880}
   - {fileID: 655565242}
-  - {fileID: 848004559}
   - {fileID: 210287102665092578}
   - {fileID: 1802412599}
   - {fileID: 1928280435}
