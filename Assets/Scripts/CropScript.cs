@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class CropScript : MonoBehaviour
 {
     public Animator anim;
+    //self
     public GameObject thing;
+    //graphics
     public GameObject crop;
-
-    public GameObject waterBar;
+    public GameObject stage2;
+    public GameObject stage3;
     public GameObject theBugs;
 
     public float growthTimer = 0f;
@@ -17,12 +19,15 @@ public class CropScript : MonoBehaviour
 
     public float bugRandom = 1f;
     public Vector3 vec;
+    public Vector3 vecs1;
     public Quaternion quat;
 
     public bool infested = false;
     public static float bugFreePlots = 5;
     public GameObject bugies;
     public float infestationChance;
+
+    public float stage = 1;
     
     void Start()
     {
@@ -37,7 +42,7 @@ public class CropScript : MonoBehaviour
             growthTimer += growth;
         }
 
-        if (!infested && growthTimer < 10000)
+        if (!infested && stage < 3)
         {
             infestationChance = bugFreePlots * 1800;
             bugRandom = Mathf.Round(Random.Range(0, infestationChance));
@@ -53,6 +58,22 @@ public class CropScript : MonoBehaviour
                 bugFreePlots--;
             }
         }
+
+        if (growthTimer >= 10000 && stage == 1)
+        {
+            Destroy(crop);
+            vecs1 = thing.transform.position;
+            crop = Instantiate(stage2, vecs1, quat);
+            crop.transform.parent = thing.transform;
+            stage++;
+        }
+        if (growthTimer >= 20000 && stage == 2)
+        {
+            Destroy(crop);
+            crop = Instantiate(stage3, vecs1, quat);
+            crop.transform.parent = thing.transform;
+            stage++;
+        }
     }
 
     private void OnMouseDown()
@@ -63,10 +84,9 @@ public class CropScript : MonoBehaviour
             infested = false;
             bugFreePlots++;
         }
-        if (growthTimer >= 10000)
+        if (stage == 3)
         {
-            Destroy(thing);
-            crop.GetComponent<PlantScript>().booked = false;
+            Destroy(crop);
             InventoryScript.buckwheat++;
         }
     }
