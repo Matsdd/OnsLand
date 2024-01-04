@@ -86,8 +86,9 @@ public class CropScript : MonoBehaviour
         }
         if (stage == 3)
         {
-            Destroy(crop);
-            InventoryScript.buckwheat++;
+            Destroy(thing);
+            InventoryScript.buckwheat += Mathf.Round(Random.Range(1,2.7f));
+            InventoryScript.buckwheatSeeds += Mathf.Round(Random.Range(1, 1.74f));
         }
     }
 }
