@@ -13,7 +13,11 @@ public class TextScript : MonoBehaviour
         if (type == 1)
         {
             var cash = InventoryScript.cash;
-            txt.text = "Cash = " + cash;
+            if (cash > 9999)
+            {
+                cash = 9999;
+            }
+            txt.text = "" + cash;
         }else if (type == 2)
         {
             var temp = WeatherScript.temp;
