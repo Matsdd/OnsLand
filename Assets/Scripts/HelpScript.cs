@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class HelpScript : MonoBehaviour
 {
-    public GameObject helpScreen;
-    public GameObject newHelp;
-    public Canvas can;
+    public Canvas helpScreen;
     void Start()
     {
         
@@ -19,7 +17,10 @@ public class HelpScript : MonoBehaviour
 
     public void onClick()
     {
-        newHelp = Instantiate(helpScreen);
-        newHelp.transform.parent = can.transform;
+        if (WelcomeScript.welcomed)
+        {
+            Instantiate(helpScreen);
+        }
     }
+
 }
