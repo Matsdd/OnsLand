@@ -9,6 +9,7 @@ public class CropSelectScript : MonoBehaviour
     public Vector3 vec;
     public Quaternion quat;
     public GameObject ths;
+    public GameObject newCrops;
     // Start is called before the first frame update
     void TheStart(Vector3 vect)
     {
@@ -22,9 +23,10 @@ public class CropSelectScript : MonoBehaviour
     }
     public void onClickBuck()
     {
-        if (InventoryScript.buckwheatSeeds > 0 && ((WeatherScript.snowing && BarsScript.fillAmntG > 0.18f) || (!WeatherScript.snowing && BarsScript.fillAmntG > 0.1f)))
+        if (InventoryScript.buckwheatSeeds > 0 && ((WeatherScript.snowing && BarsScript.fillAmntG > 0.22f) || (!WeatherScript.snowing && BarsScript.fillAmntG > 0.14f)))
         {
-            Instantiate(crops, vec, quat);
+            newCrops = Instantiate(crops, vec, quat);
+            newCrops.SendMessage("TheStart", "Buckwheat");
             InventoryScript.buckwheatSeeds--;
             Destroy(ths);
 
@@ -32,17 +34,34 @@ public class CropSelectScript : MonoBehaviour
 
             if (WeatherScript.snowing)
             {
-                BarsScript.fillAmntG -= 0.18f;
+                BarsScript.fillAmntG -= 0.22f;
             }
             else
             {
-                BarsScript.fillAmntG -= 0.1f;
+                BarsScript.fillAmntG -= 0.14f;
             }
         }
     }
     public void onClickWheat()
     {
+        if (InventoryScript.wheatSeeds > 0 && ((WeatherScript.snowing && BarsScript.fillAmntG > 0.22f) || (!WeatherScript.snowing && BarsScript.fillAmntG > 0.14f)))
+        {
+            newCrops = Instantiate(crops, vec, quat);
+            newCrops.SendMessage("TheStart", "Wheat");
+            InventoryScript.wheatSeeds--;
+            Destroy(ths);
 
+            PlantScript.cropSelecting = false;
+
+            if (WeatherScript.snowing)
+            {
+                BarsScript.fillAmntG -= 0.22f;
+            }
+            else
+            {
+                BarsScript.fillAmntG -= 0.14f;
+            }
+        }
     }
 
     public void onClickHut()

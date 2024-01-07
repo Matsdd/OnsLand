@@ -28,17 +28,25 @@ public class CropScript : MonoBehaviour
     public float infestationChance;
 
     public float stage = 1;
+
+    public string kind;
+    //boekweit heeft een mulitplier van 1
+    public float growthMultiplier = 1;
     
-    void Start()
+    public void TheStart(string fl)
     {
-        
+        kind = fl;
+        if (kind == "Wheat")
+        {
+            growthMultiplier = 0.86f;
+        }
     }
 
     
     void Update()
     {
         if (!infested && BarsScript.fillAmntW > 0 && BarsScript.fillAmntG > 0) {
-            growth = (0.75f * BarsScript.fillAmntG) + (0.75f * BarsScript.fillAmntW);
+            growth = (0.75f * BarsScript.fillAmntG) + (0.75f * BarsScript.fillAmntW) * growthMultiplier;
             growthTimer += growth;
         }
 
@@ -87,8 +95,15 @@ public class CropScript : MonoBehaviour
         if (stage == 3)
         {
             Destroy(thing);
-            InventoryScript.buckwheat += Mathf.Round(Random.Range(1,2.7f));
-            InventoryScript.buckwheatSeeds += Mathf.Round(Random.Range(1, 1.74f));
+            if (kind == "Buckwheat")
+            {
+                InventoryScript.buckwheat += Mathf.Round(Random.Range(1, 2.7f));
+                InventoryScript.buckwheatSeeds += Mathf.Round(Random.Range(0.24f, 1.82f));
+            }else if (kind == "Wheat")
+            {
+                InventoryScript.wheat += Mathf.Round(Random.Range(1, 2.9f));
+                InventoryScript.wheatSeeds += Mathf.Round(Random.Range(0.1f, 1.76f));
+            }
         }
     }
 }
