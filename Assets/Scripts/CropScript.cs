@@ -32,13 +32,22 @@ public class CropScript : MonoBehaviour
     public string kind;
     //boekweit heeft een mulitplier van 1
     public float growthMultiplier = 1;
-    
+
     public void TheStart(string fl)
     {
         kind = fl;
-        if (kind == "Wheat")
+        if (kind == "Wheat" || kind == "Rye" || kind == "Oat" || kind == "Spelt")
         {
             growthMultiplier = 0.86f;
+        } else if (kind == "Cran" || kind == "Apple")
+        {
+            growthMultiplier = 0.62f;
+        } else if (kind == "Hop")
+        {
+            growthMultiplier = 0.72f;
+        } else if (kind == "Hut")
+        {
+            growthMultiplier = 0.92f;
         }
     }
 
@@ -103,6 +112,41 @@ public class CropScript : MonoBehaviour
             {
                 InventoryScript.wheat += Mathf.Round(Random.Range(1, 2.9f));
                 InventoryScript.wheatSeeds += Mathf.Round(Random.Range(0.1f, 1.76f));
+            }
+            else if (kind == "Rye")
+            {
+                InventoryScript.rye += Mathf.Round(Random.Range(0.8f, 2.75f));
+                InventoryScript.ryeSeeds += Mathf.Round(Random.Range(0.08f, 1.69f));
+            }
+            else if (kind == "Oat")
+            {
+                InventoryScript.oat += Mathf.Round(Random.Range(0.8f, 2.7f));
+                InventoryScript.oatSeeds += Mathf.Round(Random.Range(0.09f, 1.72f));
+            }
+            else if (kind == "Spelt")
+            {
+                InventoryScript.spelt += Mathf.Round(Random.Range(0.9f, 2.8f));
+                InventoryScript.speltSeeds += Mathf.Round(Random.Range(0.1f, 1.74f));
+            }
+            else if (kind == "Hop")
+            {
+                InventoryScript.hop += Mathf.Round(Random.Range(1f, 2f));
+                InventoryScript.hopSeeds += Mathf.Round(Random.Range(0, 1.2f));
+            }
+            else if (kind == "Hut")
+            {
+                InventoryScript.huttentut += Mathf.Round(Random.Range(0.9f, 2));
+                InventoryScript.huttentutSeeds += Mathf.Round(Random.Range(0.35f, 1.82f));
+            }
+            else if (kind == "Cran")
+            {
+                InventoryScript.cranberry += Mathf.Round(Random.Range(1.1f, 3.7f));
+                InventoryScript.cranberrySeeds += Mathf.Round(Random.Range(-0.3f, 0.9f));
+            }
+            else if (kind == "Apple")
+            {
+                InventoryScript.apple += Mathf.Round(Random.Range(0.9f, 2.7f));
+                InventoryScript.appleSeeds += Mathf.Round(Random.Range(-0.1f, 1));
             }
         }
     }
