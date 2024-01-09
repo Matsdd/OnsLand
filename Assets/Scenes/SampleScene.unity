@@ -67,9 +67,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -816,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4abedab6573524e8fef019660aa4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: 0
+  WaterBar: {fileID: 0}
 --- !u!1 &1744593648
 GameObject:
   m_ObjectHideFlags: 0
