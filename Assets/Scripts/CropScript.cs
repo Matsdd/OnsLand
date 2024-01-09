@@ -107,31 +107,31 @@ public class CropScript : MonoBehaviour
             if (kind == "Buckwheat")
             {
                 InventoryScript.buckwheat += Mathf.Round(Random.Range(1, 2.7f));
-                InventoryScript.buckwheatSeeds += Mathf.Round(Random.Range(0.24f, 1.82f));
+                InventoryScript.buckwheatSeeds += Mathf.Round(Random.Range(0.28f, 1.82f));
             }else if (kind == "Wheat")
             {
                 InventoryScript.wheat += Mathf.Round(Random.Range(1, 2.9f));
-                InventoryScript.wheatSeeds += Mathf.Round(Random.Range(0.1f, 1.76f));
+                InventoryScript.wheatSeeds += Mathf.Round(Random.Range(0.3f, 1.76f));
             }
             else if (kind == "Rye")
             {
                 InventoryScript.rye += Mathf.Round(Random.Range(0.8f, 2.75f));
-                InventoryScript.ryeSeeds += Mathf.Round(Random.Range(0.08f, 1.69f));
+                InventoryScript.ryeSeeds += Mathf.Round(Random.Range(0.3f, 1.69f));
             }
             else if (kind == "Oat")
             {
                 InventoryScript.oat += Mathf.Round(Random.Range(0.8f, 2.7f));
-                InventoryScript.oatSeeds += Mathf.Round(Random.Range(0.09f, 1.72f));
+                InventoryScript.oatSeeds += Mathf.Round(Random.Range(0.3f, 1.72f));
             }
             else if (kind == "Spelt")
             {
                 InventoryScript.spelt += Mathf.Round(Random.Range(0.9f, 2.8f));
-                InventoryScript.speltSeeds += Mathf.Round(Random.Range(0.1f, 1.74f));
+                InventoryScript.speltSeeds += Mathf.Round(Random.Range(0.3f, 1.74f));
             }
             else if (kind == "Hop")
             {
                 InventoryScript.hop += Mathf.Round(Random.Range(1f, 2f));
-                InventoryScript.hopSeeds += Mathf.Round(Random.Range(0, 1.2f));
+                InventoryScript.hopSeeds += Mathf.Round(Random.Range(0.4f, 1.2f));
             }
             else if (kind == "Hut")
             {
@@ -141,12 +141,12 @@ public class CropScript : MonoBehaviour
             else if (kind == "Cran")
             {
                 InventoryScript.cranberry += Mathf.Round(Random.Range(1.1f, 3.7f));
-                InventoryScript.cranberrySeeds += Mathf.Round(Random.Range(-0.3f, 0.9f));
+                InventoryScript.cranberrySeeds += Mathf.Round(Random.Range(1, 1.8f));
             }
             else if (kind == "Apple")
             {
                 InventoryScript.apple += Mathf.Round(Random.Range(0.9f, 2.7f));
-                InventoryScript.appleSeeds += Mathf.Round(Random.Range(-0.1f, 1));
+                InventoryScript.appleSeeds += Mathf.Round(Random.Range(1, 1.7f));
             }
         }
     }

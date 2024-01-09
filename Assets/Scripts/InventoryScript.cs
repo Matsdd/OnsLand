@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-    public static float cash = 100;
+    public static float cash = 300;
 
     public static float buckwheatSeeds = 3;
     public static float buckwheat = 0;
