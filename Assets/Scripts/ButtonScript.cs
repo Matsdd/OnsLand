@@ -7,6 +7,7 @@ public class ButtonScript : MonoBehaviour
 {
     public bool openUrl = false;
     public int scene;
+    public static int prevscene;
 
     private void Start()
     {
@@ -29,7 +30,19 @@ public class ButtonScript : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+            // mainscene hoeft niet aangemaakt te worden
+            if (scene == 0)
+            {
+                if (prevscene != 0)
+                {
+                    SceneManager.UnloadSceneAsync(prevscene);
+                }
+            }
+            else
+            {
+                SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+            }
+            prevscene = scene;
         }
     }
 }

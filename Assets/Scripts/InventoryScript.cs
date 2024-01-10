@@ -40,9 +40,7 @@ public class InventoryScript : MonoBehaviour
 
     void Start()
     {
-        buckwheatText = GameObject.Find("BuckwheatText").GetComponent<TMP_Text>();
-        wheatText = GameObject.Find("WheatText").GetComponent<TMP_Text>();
-        oatText = GameObject.Find("OatText").GetComponent<TMP_Text>();
+
     }
 
     void Update()
