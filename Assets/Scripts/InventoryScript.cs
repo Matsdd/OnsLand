@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-    public static float cash = 300;
+    public static float cash = 10;
 
     public static float buckwheatSeeds = 3;
     public static float buckwheat = 0;
 
-    public static float wheatSeeds = 1;
+    public static float wheatSeeds = 0;
     public static float wheat = 0;
 
     public static float oatSeeds = 0;

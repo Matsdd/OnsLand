@@ -41,5 +41,38 @@ public class ShowAmountsShopS : MonoBehaviour
 
             txt.text = "Jij hebt:\n" + InventoryScript.cranberrySeeds;
         }
+        else if (kind == "boe")
+        {
+            txt.text = "Jij hebt:\n" + InventoryScript.buckwheat;
+        }
+        else if (kind == "tar")
+        {
+            txt.text = "Jij hebt:\n" + InventoryScript.wheat;
+        }
+        else if (kind == "hut")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.huttentut;
+        }
+        else if (kind == "spe")
+        {
+            txt.text = "Jij hebt:\n" + InventoryScript.spelt;
+
+        }
+        else if (kind == "app")
+        {
+            txt.text = "Jij hebt:\n" + InventoryScript.apple;
+
+        }
+        else if (kind == "hop")
+        {
+            txt.text = "Jij hebt:\n" + InventoryScript.hop;
+
+        }
+        else if (kind == "cra")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.cranberry;
+        }
     }
 }
