@@ -31,7 +31,7 @@ public class PlantScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!booked)
+        if (!booked && CropScript.gameRunning)
         {
             if (WeatherScript.snowing)
             {

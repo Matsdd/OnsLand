@@ -36,11 +36,13 @@ public class ButtonScript : MonoBehaviour
                 if (prevscene != 0)
                 {
                     SceneManager.UnloadSceneAsync(prevscene);
+                    CropScript.gameRunning = true;
                 }
             }
             else
             {
                 SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+                CropScript.gameRunning = false;
             }
             prevscene = scene;
         }

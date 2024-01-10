@@ -26,12 +26,15 @@ public class CropScript : MonoBehaviour
     public static float bugFreePlots = 5;
     public GameObject bugies;
     public float infestationChance;
+    public float infestationTimer = 0;
 
     public float stage = 1;
 
     public string kind;
     //boekweit heeft een mulitplier van 1
     public float growthMultiplier = 1;
+
+    public static bool gameRunning = true;
 
     public void TheStart(string fl)
     {
@@ -54,25 +57,40 @@ public class CropScript : MonoBehaviour
     
     void Update()
     {
-        if (!infested && BarsScript.fillAmntW > 0 && BarsScript.fillAmntG > 0) {
-            growth = (0.75f * BarsScript.fillAmntG) + (0.75f * BarsScript.fillAmntW) * growthMultiplier;
-            growthTimer += growth;
-        }
-
-        if (!infested && stage < 3)
+        if (gameRunning)
         {
-            infestationChance = bugFreePlots * 1800;
-            bugRandom = Mathf.Round(Random.Range(0, infestationChance));
-            if (bugRandom == 0)
+            if (infested)
             {
-                vec = thing.transform.position;
-                vec.x += 1.7f;
-                vec.y -= 1;
+                infestationTimer++;
+            }
+            if (infestationTimer > 10000)
+            {
+                Destroy(thing);
+                Destroy(bugies);
+                bugFreePlots++;
+            }
 
-                bugies = Instantiate(theBugs, vec, quat);
+            if (!infested && BarsScript.fillAmntW > 0 && BarsScript.fillAmntG > 0)
+            {
+                growth = (1.5f * BarsScript.fillAmntG * BarsScript.fillAmntW) * growthMultiplier;
+                growthTimer += growth;
+            }
 
-                infested = true;
-                bugFreePlots--;
+            if (!infested && stage < 3)
+            {
+                infestationChance = bugFreePlots * 1900;
+                bugRandom = Mathf.Round(Random.Range(0, infestationChance));
+                if (bugRandom == 0)
+                {
+                    vec = thing.transform.position;
+                    vec.x += 1.7f;
+                    vec.y -= 1;
+
+                    bugies = Instantiate(theBugs, vec, quat);
+
+                    infested = true;
+                    bugFreePlots--;
+                }
             }
         }
 

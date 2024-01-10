@@ -16,7 +16,7 @@ public class BarsScript : MonoBehaviour
     void Update()
     {
         //water
-        if (WelcomeScript.welcomed)
+        if (WelcomeScript.welcomed && CropScript.gameRunning)
         {
             if (WeatherScript.raining)
             {
