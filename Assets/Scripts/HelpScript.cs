@@ -5,6 +5,7 @@ using UnityEngine;
 public class HelpScript : MonoBehaviour
 {
     public Canvas helpScreen;
+    public static bool help;
     void Start()
     {
         
@@ -17,9 +18,10 @@ public class HelpScript : MonoBehaviour
 
     public void onClick()
     {
-        if (WelcomeScript.welcomed)
+        if (WelcomeScript.welcomed && !help)
         {
             Instantiate(helpScreen);
+            help = true;
         }
     }
 

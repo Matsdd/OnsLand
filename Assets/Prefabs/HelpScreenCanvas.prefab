@@ -477,6 +477,7 @@ MonoBehaviour:
   ths: {fileID: 866220233117641904}
   crop: 0
   onWelcomeMessage: 0
+  onHelpText: 1
 --- !u!1 &7294118876593656308
 GameObject:
   m_ObjectHideFlags: 0

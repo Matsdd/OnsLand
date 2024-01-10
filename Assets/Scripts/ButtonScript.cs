@@ -26,7 +26,10 @@ public class ButtonScript : MonoBehaviour
     {
         if (openUrl)
         {
-            Application.OpenURL("https://landvanons.nl/");
+            if (CropScript.gameRunning)
+            {
+                Application.OpenURL("https://landvanons.nl/");
+            }
         }
         else
         {
@@ -37,14 +40,20 @@ public class ButtonScript : MonoBehaviour
                 {
                     SceneManager.UnloadSceneAsync(prevscene);
                     CropScript.gameRunning = true;
+                    CropScript.ablePause = true;
                 }
             }
             else
             {
-                SceneManager.LoadScene(scene, LoadSceneMode.Additive);
-                CropScript.gameRunning = false;
+                if (CropScript.gameRunning)
+                {
+                    SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+                    CropScript.gameRunning = false;
+                    CropScript.ablePause = false;
+                }
             }
             prevscene = scene;
         }
+        
     }
 }

@@ -53,7 +53,7 @@ public class PlantScript : MonoBehaviour
             vect.z -= -2f;
             positionSet = true;
         }
-        if (!cropSelecting)
+        if (!cropSelecting && CropScript.gameRunning)
         {
 
                 GameObject Ui = Instantiate(ui, uivect, uiquat);

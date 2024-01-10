@@ -7,6 +7,7 @@ public class XScript : MonoBehaviour
     public GameObject ths;
     public bool crop;
     public bool onWelcomeMessage = false;
+    public bool onHelpText = false;
     public void onClick()
     {
         Destroy(ths);
@@ -17,6 +18,10 @@ public class XScript : MonoBehaviour
         if (onWelcomeMessage)
         {
             WelcomeScript.welcomed = true;
+        }
+        if (onHelpText)
+        {
+            HelpScript.help = false;
         }
     }
 }
