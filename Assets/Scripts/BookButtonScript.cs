@@ -12,13 +12,15 @@ public class BookButtonScript : MonoBehaviour
 
     public GameObject buttonLeft;
     public GameObject buttonRight;
+
+    public float maxPages = 4;
     public void pageSet()
     {
         if (currentPage == 1 && side == 1)
         {
             return;
         }
-        if (currentPage == 4 && side == -1)
+        if (currentPage == maxPages & side == -1)
         {
             return;
         }

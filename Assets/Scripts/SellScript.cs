@@ -49,6 +49,16 @@ public class SellScript : MonoBehaviour
             InventoryScript.hop--;
             InventoryScript.cash += 6;
         }
+        else if (kind == "be" && InventoryScript.beer > 0)
+        {
+            InventoryScript.beer--;
+            InventoryScript.cash += 40;
+        }
+        else if (kind == "boc" && InventoryScript.bockBeer > 0)
+        {
+            InventoryScript.bockBeer--;
+            InventoryScript.cash += 40;
+        }
         setCurrency();
     }
 
