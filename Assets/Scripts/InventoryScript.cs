@@ -34,6 +34,11 @@ public class InventoryScript : MonoBehaviour
     public static float huttentutSeeds = 0;
     public static float huttentut = 0;
 
+    public static float beer = 0;
+    public static float bockBeer = 0;
+    public static float ciderA = 0;
+    public static float CiderC = 0;
+
     public static TMP_Text buckwheatText;
     public static TMP_Text wheatText;
     public static TMP_Text oatText;
