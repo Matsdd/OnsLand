@@ -55,5 +55,43 @@ public class CraftScript : MonoBehaviour
                 colortimer = 100;
             }
         }
+        else if (craftingId == 4)
+        {
+            //cider cranberry
+            if (InventoryScript.hop > 1 && InventoryScript.buckwheat > 1 && InventoryScript.cranberry > 2)
+            {
+                InventoryScript.hop -= 2;
+                InventoryScript.buckwheat -= 2;
+                InventoryScript.cranberry -= 3;
+                InventoryScript.CiderC++;
+
+                craftImg.color = Color.green;
+                colortimer = 100;
+            }
+            else
+            {
+                craftImg.color = Color.red;
+                colortimer = 100;
+            }
+        }
+        else if (craftingId == 4)
+        {
+            //cider appel
+            if (InventoryScript.hop > 1 && InventoryScript.buckwheat > 1 && InventoryScript.apple > 2)
+            {
+                InventoryScript.hop -= 2;
+                InventoryScript.buckwheat -= 2;
+                InventoryScript.apple -= 3;
+                InventoryScript.ciderA++;
+
+                craftImg.color = Color.green;
+                colortimer = 100;
+            }
+            else
+            {
+                craftImg.color = Color.red;
+                colortimer = 100;
+            }
+        }
     }
 }

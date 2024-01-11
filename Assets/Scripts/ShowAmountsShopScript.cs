@@ -84,5 +84,15 @@ public class ShowAmountsShopS : MonoBehaviour
 
             txt.text = "Jij hebt:\n" + InventoryScript.bockBeer;
         }
+        else if (kind == "cia")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.ciderA;
+        }
+        else if (kind == "cic")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.CiderC;
+        }
     }
 }

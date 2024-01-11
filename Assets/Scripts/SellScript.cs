@@ -59,6 +59,16 @@ public class SellScript : MonoBehaviour
             InventoryScript.bockBeer--;
             InventoryScript.cash += 40;
         }
+        else if (kind == "cia" && InventoryScript.ciderA > 0)
+        {
+            InventoryScript.ciderA--;
+            InventoryScript.cash += 55;
+        }
+        else if (kind == "cic" && InventoryScript.CiderC > 0)
+        {
+            InventoryScript.CiderC--;
+            InventoryScript.cash += 60;
+        }
         setCurrency();
     }
 
