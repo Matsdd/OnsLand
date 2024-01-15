@@ -27,7 +27,7 @@ public class RemoveSignScript : MonoBehaviour
     private void OnMouseDown()
     {
         cost = fieldsUnlocked * fieldsUnlocked * 10 + 5;
-        if (InventoryScript.cash > cost && WelcomeScript.welcomed && CropScript.gameRunning)
+        if (InventoryScript.cash >= cost && WelcomeScript.welcomed && CropScript.gameRunning)
         {
             DestroyImmediate(this.SignField, true);
             GameObject fild = Instantiate(Field, vec, quat);
