@@ -69,6 +69,31 @@ public class SellScript : MonoBehaviour
             InventoryScript.CiderC--;
             InventoryScript.cash += 60;
         }
+        else if (kind == "co" && InventoryScript.cookie > 0)
+        {
+            InventoryScript.cookie--;
+            InventoryScript.cash += 14;
+        }
+        else if (kind == "pa" && InventoryScript.pasta > 0)
+        {
+            InventoryScript.pasta--;
+            InventoryScript.cash += 24;
+        }
+        else if (kind == "pan" && InventoryScript.pancake > 0)
+        {
+            InventoryScript.pancake--;
+            InventoryScript.cash += 42;
+        }
+        else if (kind == "bc" && InventoryScript.cracker > 0)
+        {
+            InventoryScript.cracker--;
+            InventoryScript.cash += 10;
+        }
+        else if (kind == "oi" && InventoryScript.oil > 0)
+        {
+            InventoryScript.oil--;
+            InventoryScript.cash += 40;
+        }
         setCurrency();
     }
 

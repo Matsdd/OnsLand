@@ -94,5 +94,30 @@ public class ShowAmountsShopS : MonoBehaviour
 
             txt.text = "Jij hebt:\n" + InventoryScript.CiderC;
         }
+        else if (kind == "oi")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.oil;
+        }
+        else if (kind == "bc")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.cracker;
+        }
+        else if (kind == "pa")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.pasta;
+        }
+        else if (kind == "pan")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.pancake;
+        }
+        else if (kind == "co")
+        {
+
+            txt.text = "Jij hebt:\n" + InventoryScript.cookie;
+        }
     }
 }

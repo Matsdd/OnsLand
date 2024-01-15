@@ -1617,7 +1617,7 @@ PrefabInstance:
       objectReference: {fileID: 301871009}
     - target: {fileID: 4883112476045965848, guid: 8a7f3306113da184787c4a715b851d7b, type: 3}
       propertyPath: maxPages
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4883112476045965848, guid: 8a7f3306113da184787c4a715b851d7b, type: 3}
       propertyPath: buttonLeft
@@ -3956,7 +3956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961f964b1056e414cbdd4df33bd3e691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kind: cia
+  kind: pa
   txt: {fileID: 190261054}
 --- !u!114 &714348069
 MonoBehaviour:
@@ -5766,7 +5766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961f964b1056e414cbdd4df33bd3e691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kind: cic
+  kind: co
   txt: {fileID: 190261054}
 --- !u!114 &957783364
 MonoBehaviour:
@@ -7318,7 +7318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 1140955445}
-  kind: pa
+  kind: pan
 --- !u!114 &1140955445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8669,7 +8669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961f964b1056e414cbdd4df33bd3e691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kind: cic
+  kind: pan
   txt: {fileID: 190261054}
 --- !u!114 &1290126320
 MonoBehaviour:
@@ -12086,7 +12086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961f964b1056e414cbdd4df33bd3e691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kind: cic
+  kind: oi
   txt: {fileID: 190261054}
 --- !u!114 &1918974917
 MonoBehaviour:
@@ -12234,7 +12234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961f964b1056e414cbdd4df33bd3e691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kind: cia
+  kind: bc
   txt: {fileID: 190261054}
 --- !u!114 &1959351046
 MonoBehaviour:
@@ -12491,7 +12491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7972260517073101445, guid: c97e628c5b949fa4389fc615d0d760d1, type: 3}
       propertyPath: maxPages
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7972260517073101445, guid: c97e628c5b949fa4389fc615d0d760d1, type: 3}
       propertyPath: buttonRight
