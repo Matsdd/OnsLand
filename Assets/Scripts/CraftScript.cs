@@ -93,5 +93,95 @@ public class CraftScript : MonoBehaviour
                 colortimer = 100;
             }
         }
+        else if (craftingId == 5)
+        {
+            //cracker
+            if (InventoryScript.buckwheat > 7)
+            {
+                InventoryScript.buckwheat -= 8;
+                InventoryScript.cracker += 3;
+
+                craftImg.color = Color.green;
+                colortimer = 100;
+            }
+            else
+            {
+                craftImg.color = Color.red;
+                colortimer = 100;
+            }
+        }
+        else if (craftingId == 6)
+        {
+            //pasta
+            if (InventoryScript.wheat > 1 && InventoryScript.buckwheat > 1)
+            {
+                InventoryScript.buckwheat -= 2;
+                InventoryScript.wheat -= 2;
+                InventoryScript.pasta++;
+
+                craftImg.color = Color.green;
+                colortimer = 100;
+            }
+            else
+            {
+                craftImg.color = Color.red;
+                colortimer = 100;
+            }
+        }
+        else if (craftingId == 7)
+        {
+            //olie
+            if (InventoryScript.huttentut > 4)
+            {
+                InventoryScript.huttentut -= 5;
+                InventoryScript.oil++;
+
+                craftImg.color = Color.green;
+                colortimer = 100;
+            }
+            else
+            {
+                craftImg.color = Color.red;
+                colortimer = 100;
+            }
+        }
+        else if (craftingId == 8)
+        {
+            //Koek
+            if (InventoryScript.wheat > 1 && InventoryScript.buckwheat > 0 && InventoryScript.spelt > 1)
+            {
+                InventoryScript.wheat -= 2;
+                InventoryScript.buckwheat -= 1;
+                InventoryScript.spelt -= 2;
+                InventoryScript.cookie += 2;
+
+                craftImg.color = Color.green;
+                colortimer = 100;
+            }
+            else
+            {
+                craftImg.color = Color.red;
+                colortimer = 100;
+            }
+        }
+        else if (craftingId == 9)
+        {
+            //Pankoek
+            if (InventoryScript.wheat > 2 && InventoryScript.buckwheat > 0 && InventoryScript.spelt > 1)
+            {
+                InventoryScript.wheat -= 3;
+                InventoryScript.buckwheat -= 1;
+                InventoryScript.spelt -= 2;
+                InventoryScript.pancake++;
+
+                craftImg.color = Color.green;
+                colortimer = 100;
+            }
+            else
+            {
+                craftImg.color = Color.red;
+                colortimer = 100;
+            }
+        }
     }
 }

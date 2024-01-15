@@ -39,6 +39,12 @@ public class InventoryScript : MonoBehaviour
     public static float ciderA = 0;
     public static float CiderC = 0;
 
+    public static float cookie = 0;
+    public static float oil = 0;
+    public static float pancake = 0;
+    public static float cracker = 0;
+    public static float pasta = 0;
+
     public static TMP_Text buckwheatText;
     public static TMP_Text wheatText;
     public static TMP_Text oatText;
