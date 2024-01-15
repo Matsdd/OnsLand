@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting;
 
 public class CropScript : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class CropScript : MonoBehaviour
     public GameObject stage2;
     public GameObject stage3;
     public GameObject theBugs;
+
+    public GameObject feedbacktxtmanager;
+    public float feedbackTxtTime = 0;
 
     public float growthTimer = 0f;
     public float growth;
@@ -36,6 +41,9 @@ public class CropScript : MonoBehaviour
 
     public static bool gameRunning = true;
     public static bool ablePause = true;
+
+    public float randomCropAmnt;
+    public float randomSeedAmnt;
 
     public void TheStart(string fl)
     {
@@ -127,49 +135,77 @@ public class CropScript : MonoBehaviour
                 Destroy(thing);
                 if (kind == "Buckwheat")
                 {
-                    InventoryScript.buckwheat += Mathf.Round(Random.Range(1, 2.7f));
-                    InventoryScript.buckwheatSeeds += Mathf.Round(Random.Range(0.28f, 1.82f));
+                    randomCropAmnt = Mathf.Round(Random.Range(1, 2.7f));
+                    InventoryScript.buckwheat += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(0.28f, 1.82f));
+                    InventoryScript.buckwheatSeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+" + randomCropAmnt + " Boekweit\n+" + randomSeedAmnt + " Zaadjes";
                 }
                 else if (kind == "Wheat")
                 {
-                    InventoryScript.wheat += Mathf.Round(Random.Range(1, 2.9f));
-                    InventoryScript.wheatSeeds += Mathf.Round(Random.Range(0.3f, 1.76f));
+                    randomCropAmnt = Mathf.Round(Random.Range(1, 2.9f));
+                    InventoryScript.wheat += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(0.3f, 1.76f));
+                    InventoryScript.wheatSeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+" + randomCropAmnt + " tarwe\n+" + randomSeedAmnt + " Zaadjes";
                 }
                 else if (kind == "Rye")
                 {
-                    InventoryScript.rye += Mathf.Round(Random.Range(0.8f, 2.75f));
-                    InventoryScript.ryeSeeds += Mathf.Round(Random.Range(0.3f, 1.69f));
+                    randomCropAmnt = Mathf.Round(Random.Range(0.8f, 2.75f));
+                    InventoryScript.rye += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(0.3f, 1.69f));
+                    InventoryScript.ryeSeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+" + randomCropAmnt + " rogge\n+" + randomSeedAmnt + " Zaadjes";
                 }
                 else if (kind == "Oat")
                 {
-                    InventoryScript.oat += Mathf.Round(Random.Range(0.8f, 2.7f));
-                    InventoryScript.oatSeeds += Mathf.Round(Random.Range(0.3f, 1.72f));
+                    randomCropAmnt = Mathf.Round(Random.Range(0.8f, 2.7f));
+                    InventoryScript.oat += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(0.3f, 1.72f));
+                    InventoryScript.oatSeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+" + randomCropAmnt + " haver\n+" + randomSeedAmnt + " Zaadjes";
                 }
                 else if (kind == "Spelt")
                 {
-                    InventoryScript.spelt += Mathf.Round(Random.Range(0.9f, 2.8f));
-                    InventoryScript.speltSeeds += Mathf.Round(Random.Range(0.3f, 1.74f));
+                    randomCropAmnt = Mathf.Round(Random.Range(0.9f, 2.8f));
+                    InventoryScript.spelt += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(0.3f, 1.74f));
+                    InventoryScript.speltSeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+" + randomCropAmnt + " spelt\n+" + randomSeedAmnt + " Zaadjes";
                 }
                 else if (kind == "Hop")
                 {
-                    InventoryScript.hop += Mathf.Round(Random.Range(1f, 2f));
-                    InventoryScript.hopSeeds += Mathf.Round(Random.Range(0.4f, 1.2f));
+                    randomCropAmnt = Mathf.Round(Random.Range(1f, 2f));
+                    InventoryScript.hop += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(0.4f, 1.2f));
+                    InventoryScript.hopSeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+" + randomCropAmnt + " hop\n+" + randomSeedAmnt + " Zaadjes";
                 }
                 else if (kind == "Hut")
                 {
-                    InventoryScript.huttentut += Mathf.Round(Random.Range(0.9f, 2));
-                    InventoryScript.huttentutSeeds += Mathf.Round(Random.Range(0.35f, 1.82f));
+                    randomCropAmnt = Mathf.Round(Random.Range(0.9f, 2));
+                    InventoryScript.huttentut += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(0.35f, 1.82f));
+                    InventoryScript.huttentutSeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+" + randomCropAmnt + " huttentut\n+" + randomSeedAmnt + " Zaadjes";
                 }
                 else if (kind == "Cran")
                 {
-                    InventoryScript.cranberry += Mathf.Round(Random.Range(1.1f, 3.7f));
-                    InventoryScript.cranberrySeeds += Mathf.Round(Random.Range(1, 1.8f));
+                    randomCropAmnt = Mathf.Round(Random.Range(1.1f, 3.7f));
+                    InventoryScript.cranberry += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(1, 1.8f));
+                    InventoryScript.cranberrySeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+" + randomCropAmnt + " cranberry\n+" + randomSeedAmnt + " Zaadjes";
                 }
                 else if (kind == "Apple")
                 {
-                    InventoryScript.apple += Mathf.Round(Random.Range(0.9f, 2.7f));
-                    InventoryScript.appleSeeds += Mathf.Round(Random.Range(1, 1.7f));
+                    randomCropAmnt = Mathf.Round(Random.Range(0.9f, 2.7f));
+                    InventoryScript.apple += randomCropAmnt;
+                    randomSeedAmnt = Mathf.Round(Random.Range(1, 1.7f));
+                    InventoryScript.appleSeeds += randomSeedAmnt;
+                    HarvestFeedbackManager.textString = "+"+randomCropAmnt+ " Appel\n+" + randomSeedAmnt + " Zaadjes";
                 }
+                HarvestFeedbackManager.activate = true;
             }
         }
     }
