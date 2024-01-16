@@ -35,11 +35,11 @@ public class PlantScript : MonoBehaviour
         {
             if (WeatherScript.snowing)
             {
-                BarsScript.fillAmntG += 0.000012f;
+                BarsScript.fillAmntG += 0.00012f;
             }
             else
             {
-                BarsScript.fillAmntG += 0.00002f;
+                BarsScript.fillAmntG += 0.0002f;
             }
         }
     }

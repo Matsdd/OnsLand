@@ -81,13 +81,13 @@ public class CropScript : MonoBehaviour
 
             if (!infested && BarsScript.fillAmntW > 0 && BarsScript.fillAmntG > 0)
             {
-                growth = (1.5f * BarsScript.fillAmntG * BarsScript.fillAmntW) * growthMultiplier;
+                growth = (10f * BarsScript.fillAmntG * BarsScript.fillAmntW) * growthMultiplier;
                 growthTimer += growth;
             }
 
             if (!infested && stage < 3)
             {
-                infestationChance = bugFreePlots * 1900;
+                infestationChance = bugFreePlots * 1000;
                 bugRandom = Mathf.Round(Random.Range(0, infestationChance));
                 if (bugRandom == 0)
                 {

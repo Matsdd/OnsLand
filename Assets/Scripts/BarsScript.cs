@@ -20,19 +20,19 @@ public class BarsScript : MonoBehaviour
         {
             if (WeatherScript.raining)
             {
-                waterBar.fillAmount += 0.0001f;
+                waterBar.fillAmount += 0.001f;
             }
             else if (WeatherScript.snowing)
             {
-                waterBar.fillAmount -= 0.000015f;
+                waterBar.fillAmount -= 0.00015f;
             }
             else if (WeatherScript.harshSun)
             {
-                waterBar.fillAmount -= 0.00002f;
+                waterBar.fillAmount -= 0.0002f;
             }
             else
             {
-                waterBar.fillAmount -= 0.00001f;
+                waterBar.fillAmount -= 0.0001f;
             }
         }
 
