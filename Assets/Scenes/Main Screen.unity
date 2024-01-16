@@ -242,7 +242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5ed1423f435ea164e801597f6f53e308, type: 3}
+  m_Texture: {fileID: 2800000, guid: 39f453a42e8c4b34ab6c5833e64a723c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 39f453a42e8c4b34ab6c5833e64a723c, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5ed1423f435ea164e801597f6f53e308, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4203,8 +4203,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fun Fact: \nHet perceel in Wassenaar maakt hun eigen jammetjes van verse
-    stukken fruit van hun grond.'
+  m_text: 'Tip 1: \nJe kunt hier klikken om verschillende weetjes over Land van ons
+    en tips over Ons land te lezen!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
