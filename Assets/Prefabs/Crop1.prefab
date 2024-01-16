@@ -443,6 +443,8 @@ MonoBehaviour:
   stage2: {fileID: 6508775122576982206, guid: 7e0baf5a4b83adb43a79a9019ddc632c, type: 3}
   stage3: {fileID: 1377762398117162946, guid: 1b5e6b2b97bc4614da0a5da80ed5aad4, type: 3}
   theBugs: {fileID: 5843773922298936086, guid: 789b7a38e5c610a44b5e1555c28bb613, type: 3}
+  feedbacktxt: {fileID: 4337052693141823767, guid: 9613faee407311b488fdd10d6e147fe0, type: 3}
+  feedbackTxtTime: 0
   growthTimer: 0
   growth: 0
   bugRandom: 1
@@ -452,7 +454,10 @@ MonoBehaviour:
   infested: 0
   bugies: {fileID: 0}
   infestationChance: 0
+  infestationTimer: 0
   stage: 1
+  kind: 
+  growthMultiplier: 1
 --- !u!65 &8589578268270229624
 BoxCollider:
   m_ObjectHideFlags: 0
